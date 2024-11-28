@@ -1,0 +1,223 @@
+/* Name: Ilyes Abdellatif Bouazza
+        Email : ilyesabdellatif_bouazza@student.uml.edu
+        University: UMass Lowell
+        Class: GUI 1 Fall 2024
+        Homework 4: Using the jQuery Plugin/UI with Your Dynamic Table
+        PART 2: jQuery UI Slider and Tab Widgets
+        FILE : style.css */
+
+#form {
+  border: 1px solid #0d47a1;
+  /* Dark blue border */
+  padding: 10px;
+  /*Add Padding From All The Four Sides*/
+  width: 500px;
+  /*fix width for the form*/
+  margin-bottom: 20px;
+  /*add margin bottom so there is a space between the form and the table*/
+}
+
+/* styling the labels */
+label {
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+/* display each (prompt label + user input + error label)in a separate row */
+.form-group {
+  margin-top: 10px;
+  display: block;
+}
+
+/* error labels are going to be under each input,they will pop up in case the input is invalid */
+.error {
+  display: block;
+}
+
+/* display each input in a seprate row  */
+input {
+  display: block;
+  border: 1px solid #0d47a1;
+  /* Dark blue border */
+  margin-bottom: 10px;
+}
+
+/* body styling */
+body {
+  padding: 40px;
+  background-color: whitesmoke;
+  font-family: Arial, sans-serif;
+  /* Use a clear sans-serif font */
+}
+
+/* h1 dynamic multiploication title  */
+h1 {
+  text-align: center;
+  background-color: #0d47a1;
+  /* Dark Blue background */
+  color: #ffffff;
+  /* White text color */
+  font-size: 40px;
+}
+
+/* h3 is the title of the user input form   */
+h3 {
+  background-color: #0d47a1;
+  /* Dark Blue background */
+  color: #ffffff;
+  /* White text color */
+  text-align: center;
+}
+
+/* display buttons next to each other  */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* buttons styling */
+.buttons input {
+  background-color: #0d47a1;
+  /* Dark Blue background */
+  color: #ffffff;
+  /* White text color */
+  font-size: 20px;
+  border: 2px solid blue;
+}
+
+/* Style for error labels */
+.error {
+  color: red;
+  /* Set the text color to red */
+  font-size: 14px;
+  /* Set the font size */
+  font-weight: bold;
+  /* Make the font bold */
+  margin-top: 5px;
+  /* Add some space above the label */
+}
+
+/* CSS for invalid input */
+.invalid-input {
+  border: 2px solid red;
+  /* Red border */
+  background-color: #ffe6e6;
+  /* Light red background */
+}
+
+/* CSS for valid input */
+.valid-input {
+  border: 2px solid green;
+  /* Green border for valid inputs */
+  background-color: #e6ffe6;
+  /* Light green background */
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style the table data cells */
+th,
+td {
+  border: 1px solid #b3e5fc;
+  /* Light Border */
+  padding: 8px;
+  /*Add Padding From All The Four Sides*/
+  text-align: center;
+  /* Center align text */
+}
+
+/* Add hover effect for table rows */
+thead th {
+  position: sticky;
+  top: 0;
+  /* Stick to the top */
+  background-color: #0d47a1;
+  /* Dark Blue background */
+  color: #ffffff;
+  /* White text color */
+  z-index: 2;
+  /* Ensure it appears above other cells */
+}
+
+/* Fix the first row, column */
+tbody th {
+  position: sticky;
+  left: 0;
+  /* Stick to the left */
+  background-color: #0d47a1;
+  /* Dark Blue background */
+  color: #ffffff;
+  /* White text color */
+  z-index: 1;
+  /* Ensure it appears below the header row */
+}
+
+/* Style for even and odd rows */
+.even-row {
+  background-color: #f2f2f2;
+  /* Light gray for even rows */
+}
+
+.odd-row {
+  background-color: #ffffff;
+  /* White for odd rows */
+}
+
+/* Styling for the Close Button */
+.close-tab {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-tab:hover .close-icon path {
+  stroke: red; /* Ensures the hover effect changes the color to red */
+}
+
+.close-tab .close-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.close-tab .close-icon path {
+  stroke: black; /* Default color */
+  fill: none; /* Ensures no fill color is applied */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Style for the list of tabs */
+#tabs-list li {
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Add spacing between checkbox and text */
+}
+
+#tab-controls button {
+  background-color: #0d47a1;
+  /* Dark Blue background */
+  color: #ffffff;
+  /* White text color */
+  font-size: 20px;
+  border: 2px solid blue;
+}
+
+.tab-controls {
+  margin-bottom: 20px;
+}
+
+/* sources :
+https://www.w3schools.com/css/ */

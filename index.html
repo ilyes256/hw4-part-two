@@ -1,0 +1,101 @@
+<!-- 
+        Name: Ilyes Abdellatif Bouazza
+        Email : ilyesabdellatif_bouazza@student.uml.edu
+        University: UMass Lowell
+        Class: GUI 1 Fall 2024
+        Homework 4: Using the jQuery Plugin/UI with Your Dynamic Table
+        PART 2: jQuery UI Slider and Tab Widgets
+        FILE : index.html
+    -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--the jQuery UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+  </head>
+  <body>
+    <!-- title of the page -->
+    <h1>Dynamic Multiplication Table</h1>
+    <!-- Form that has inputs and labels for instructions and to show any errors -->
+    <form id="form">
+      <!-- Form title asking the user to enter all the ranges for rows and columns -->
+      <h3>Please enter all the table ranges</h3>
+
+      <!-- adding name attribute to each input field in order to use jquery validation plugin -->
+      <div class="form-group">
+        <label>Min Column Value</label>
+        <input id="min-column" name="minColumn" type="text" />
+        <div id="slider-min-column"></div>
+        <!-- Slider for Min Column -->
+      </div>
+
+      <div class="form-group">
+        <label>Max Column Value</label>
+        <input id="max-column" name="maxColumn" type="text" />
+        <div id="slider-max-column"></div>
+        <!-- Slider for Max Column -->
+      </div>
+
+      <div class="form-group">
+        <label>Min Row Value</label>
+        <input id="min-row" name="minRow" type="text" />
+        <div id="slider-min-row"></div>
+        <!-- Slider for Min Row -->
+      </div>
+
+      <div class="form-group">
+        <label>Max Row Value</label>
+        <input id="max-row" name="maxRow" type="text" />
+        <div id="slider-max-row"></div>
+        <!-- Slider for Max Row -->
+      </div>
+
+      <!-- Button to generate multiplication table table  -->
+      <div class="buttons">
+        <input id="generate-btn" type="button" value="Generate" />
+      </div>
+    </form>
+
+    <!-- Section to display opened tabs -->
+    <section id="opened-tabs">
+      <h3>Opened Tabs</h3>
+      <ul id="tabs-list"></ul>
+      <div class="tab-controls">
+        <button id="close-selected-btn">Close Selected Tabs</button>
+        <button id="close-all-btn">Close All Tabs</button>
+      </div>
+    </section>
+
+    <!-- Multiplication table is going to be in this continer -->
+    <div id="container-table"></div>
+
+    <!-- jquery CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+
+    <!-- jquery validation plugin CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+    <!-- jQuery UI JS here -->
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+      crossorigin="anonymous"></script>
+
+    <!-- js file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+
+<!-- sources :
+I used sources provided by the professor in the hw4 pdf posted on blackboard
+Two chapters of Dan Wellman’s book on the jQuery UI library
+ -->
